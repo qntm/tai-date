@@ -5,7 +5,7 @@ A `TaiDate` object represents an instant in [International Atomic Time (TAI)](ht
 ## Installation
 
 ```
-npm install tai-date`
+npm install tai-date
 ```
 
 ## Usage
