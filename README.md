@@ -2,6 +2,14 @@
 
 A `TaiDate` object represents an instant in [International Atomic Time (TAI)](https://en.wikipedia.org/wiki/International_Atomic_Time), in the same way that a conventional JavaScript [`Date`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) object represents an instant in Unix time.
 
+## Installation
+
+```
+npm install tai-date`
+```
+
+## Usage
+
 ```javascript
 var TaiDate = require("tai-date");
 
