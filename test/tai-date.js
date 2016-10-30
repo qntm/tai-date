@@ -57,3 +57,10 @@ console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMilliseconds() === 774)
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMinutes     () === 15);
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMonth       () === 9);
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getSeconds     () === 16);
+
+// leapSeconds
+console.log(TaiDate.leapSeconds.length === 28);
+console.log(TaiDate.leapSeconds[0].taiDate.getTime() === 63072010000);
+console.log(TaiDate.leapSeconds[1].taiDate.getTime() === 78796811000);
+console.log(TaiDate.leapSeconds[0].offset === 10000);
+console.log(TaiDate.leapSeconds[1].offset === 11000);

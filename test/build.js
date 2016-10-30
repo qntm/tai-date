@@ -8,9 +8,10 @@ var build = require("./../src/build.js");
 // TAI:          [3][4][5][6][ 7][ 8][ 9][...]
 // Unix: [...][6][7][8][9][9][10][11]
 //                               [12][13][...]
-var odd = tai.build(7, -4, [
-	{unix: 10, offset:  1}, // inserted leap millisecond
-	{unix: 12, offset: -1}  // removed leap millisecond
+var odd = tai.build([
+	{atomic: 3, offset: -4},
+	{atomic: 6, offset: -3}, // inserted leap millisecond
+	{atomic: 9, offset: -4}  // removed leap millisecond
 ]);
 
 var OddDate = build(odd);

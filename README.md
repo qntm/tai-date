@@ -117,11 +117,7 @@ new TaiDate(2006, 6, 3, 21, 44, 38).toString()
 // "Mon, 03 Jul 2006 21:44:38 TAI"
 ```
 
-### TaiDate.earliest
-A `TaiDate` object representing 1972-01-01 00:00:10 TAI, the earliest moment in TAI where this library works.
-
-### TaiDate.initialOffset
-TAI milliseconds minus Unix milliseconds at the instant when TAI began: `10000`.
-
 ### TaiDate.leapSeconds
-Returns an array of leap second objects. Each leap second contains the `Date` when the offset between TAI and Unix time changed, and the number of milliseconds by which the offset changed. E.g. `{date: new Date(78796801000), offset: 1000}` for the inserted leap second of 30 June 1972.
+Returns an array of leap second objects. Each leap second contains the `TaiDate` when the offset between TAI and Unix time changed, and the new offset. E.g. `{taiDate: new TaiDate(78796811000), offset: 11000}` for the inserted leap second of 30 June 1972.
+
+The first entry in the array is the beginning of TAI for our purposes, `{taiDate: new TaiDate(63072010000), offset: 10000}`

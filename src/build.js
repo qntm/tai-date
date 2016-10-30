@@ -40,7 +40,7 @@ module.exports = function(tai) {
 			throw new Error("Too many arguments for constructor");
 		}
 
-		if(atomic < tai.earliestAtomic) {
+		if(atomic < tai.leapSeconds[0].atomic) {
 			throw new Error("This atomic time is not defined.");
 		}
 		this._date = new Date(atomic);
@@ -61,7 +61,7 @@ module.exports = function(tai) {
 	*/
 	TaiDate.TAI = function(/* year, month[, day[, ...]] */) {
 		var atomic = Date.UTC.apply(Date, arguments);
-		if(atomic < tai.earliestAtomic) {
+		if(atomic < tai.leapSeconds[0].atomic) {
 			throw new Error("This atomic time is not defined.");
 		}
 		return atomic;
@@ -75,13 +75,10 @@ module.exports = function(tai) {
 		return new TaiDate(date);
 	};
 
-	TaiDate.earliest = new TaiDate(tai.earliestAtomic);
-	TaiDate.initialOffset = tai.initialOffset;
-
 	TaiDate.leapSeconds = tai.leapSeconds.map(function(leapSecond) {
 		return {
-			date   : new Date(leapSecond.unix),
-			offset : leapSecond.offset
+			taiDate : new TaiDate(leapSecond.atomic),
+			offset  : leapSecond.offset
 		};
 	});
 
