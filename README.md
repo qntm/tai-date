@@ -107,12 +107,13 @@ Return a string representing this instant in TAI.
 ```javascript
 new TaiDate(2006, 6, 3, 21, 44, 38).toString()
 // "Mon, 03 Jul 2006 21:44:38 TAI"
+```
 
 ### TaiDate.earliest
 A `TaiDate` object representing 1972-01-01 00:00:10 TAI, the earliest moment in TAI where this library works.
 
 ### TaiDate.initialOffset
-Returns TAI milliseconds minus Unix milliseconds at the instant when TAI began: `10000`.
+TAI milliseconds minus Unix milliseconds at the instant when TAI began: `10000`.
 
 ### TaiDate.leapSeconds
 Returns an array of leap second objects. Each leap second contains the `Date` when the offset between TAI and Unix time changed, and the number of milliseconds by which the offset changed. E.g. `{date: new Date(78796801000), offset: 1000}` for the inserted leap second of 30 June 1972.
