@@ -1,6 +1,6 @@
 # tai-date
 
-A `TaiDate` object represents an instant in [International Atomic Time (TAI)](https://en.wikipedia.org/wiki/International_Atomic_Time), in the same way that a conventional JavaScript [`Date`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) object represents an instant in Unix time.
+A `TaiDate` object represents an instant in [International Atomic Time (TAI)](https://en.wikipedia.org/wiki/International_Atomic_Time), in the same way that a conventional JavaScript [`Date`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date) object represents an instant in Unix time. Based on the dependency module [`t-a-i`](https://github.com/ferno/t-a-i), which provides methods for converting TAI milliseconds to Unix milliseconds.
 
 ## Installation
 
@@ -42,7 +42,7 @@ new TaiDate();
 ```
 
 ### new TaiDate(atomic)
-`atomic` is a number of TAI milliseconds (see the dependency module [`t-a-i`](https://github.com/ferno/t-a-i) for definition). Constructs a `TaiDate` object representing this instant in time.
+`atomic` is a number of TAI milliseconds. Constructs a `TaiDate` object representing this instant in time.
 ```javascript
 new TaiDate(1000000000000);
 // Sun, 09 Sep 2001 01:46:40 TAI
