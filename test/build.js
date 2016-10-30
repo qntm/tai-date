@@ -77,3 +77,5 @@ console.log(new OddDate(2007, 5, 3, 13, 14, 15, 999).getMilliseconds() === 999);
 console.log(new OddDate(2007, 5, 3, 13, 14, 15, 999).getMinutes     () === 14);
 console.log(new OddDate(2007, 5, 3, 13, 14, 15, 999).getMonth       () === 5);
 console.log(new OddDate(2007, 5, 3, 13, 14, 15, 999).getSeconds     () === 15);
+
+console.log(new OddDate(2007, 5, 3, 13, 14, 15, 999).toString() === "Sun, 03 Jun 2007 13:14:15 TAI");

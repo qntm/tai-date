@@ -121,16 +121,16 @@ module.exports = function(tai) {
 		var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 		return [
-			days[this.getDay()] + ",",       // "Mon,"
-			leftPad0(this.getDate(), 2),     // "03"
-			months[this.getMonth()],         // "Jul"
-			leftPad0(this.getFullYear(), 4), // "2006"
+			days[this.getDay()] + ",",               // "Mon,"
+			leftPad0(String(this.getDate()), 2),     // "03"
+			months[this.getMonth()],                 // "Jul"
+			leftPad0(String(this.getFullYear()), 4), // "2006"
 			[
-				leftPad0(this.getHours(), 2),   // "21"
-				leftPad0(this.getMinutes(), 2), // "44"
-				leftPad0(this.getSeconds(), 2)  // "38"
-			].join(":"),                     // "21:44:38"
-			"TAI"                            // "TAI"
+				leftPad0(String(this.getHours()), 2),   // "21"
+				leftPad0(String(this.getMinutes()), 2), // "44"
+				leftPad0(String(this.getSeconds()), 2)  // "38"
+			].join(":"),                             // "21:44:38"
+			"TAI"                                    // "TAI"
 		].join(" ");
 	};
 
