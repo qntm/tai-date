@@ -1,6 +1,6 @@
 {
   "name": "tai-date",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A TaiDate stores an instant in TAI, the same way that a Date stores an instant in Unix time",
   "main": "./src/tai-date.js",
   "scripts": {

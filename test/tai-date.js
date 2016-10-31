@@ -4,11 +4,13 @@ var TaiDate = require("./../src/tai-date.js");
 
 // .TAI()
 try {
-	TaiDate.TAI(1972, 0, 1, 0, 0, 9, 999);
+	TaiDate.TAI(1961, 0, 1, 0, 0, 1, 422);
 	console.log(false);
 } catch(e) {
 	console.log(true);
 }
+console.log(TaiDate.TAI(1961, 0, 1, 0, 0, 1, 423) === -283996798577);
+console.log(TaiDate.TAI(1968, 0, 1, 0, 0, 1, 423) === -63158398577);
 console.log(TaiDate.TAI(1972, 0, 1, 0, 0, 10) === 63072010000);
 console.log(TaiDate.TAI(1972, 0, 1, 0, 0, 10, 1) === 63072010001);
 console.log(TaiDate.TAI(2016, 9, 27, 21, 15) === 1477602900000);
@@ -21,21 +23,23 @@ try {
 	console.log(true);
 }
 try {
-	new TaiDate(63072009999);
+	new TaiDate(-283996798578);
 	console.log(false);
 } catch(e) {
 	console.log(true);
 }
+console.log(new TaiDate(-283996798577).getTime() === -283996798577);
 console.log(new TaiDate(63072010000).getTime() === 63072010000);
 console.log(new TaiDate(1477602900000).getTime() === 1477602900000);
 
 // 2- to 7-argument constructors
 try {
-	new TaiDate(1972, 0, 1, 0, 0, 9, 999);
+	new TaiDate(1961, 0, 1, 0, 0, 1, 422);
 	console.log(false);
 } catch(e) {
 	console.log(true);
 }
+console.log(new TaiDate(1961, 0, 1, 0, 0, 1, 423).getTime() === -283996798577);
 console.log(new TaiDate(1972, 0, 1, 0, 0, 10).getTime() === 63072010000);
 console.log(new TaiDate(1972, 0, 1, 0, 0, 10, 1).getTime() === 63072010001);
 console.log(new TaiDate(2016, 9, 27, 21, 15).getTime() === 1477602900000);
@@ -59,8 +63,10 @@ console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMonth       () === 9);
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getSeconds     () === 16);
 
 // leapSeconds
-console.log(TaiDate.leapSeconds.length === 28);
-console.log(TaiDate.leapSeconds[0].taiDate.getTime() === 63072010000);
-console.log(TaiDate.leapSeconds[1].taiDate.getTime() === 78796811000);
-console.log(TaiDate.leapSeconds[0].offset === 10000);
-console.log(TaiDate.leapSeconds[1].offset === 11000);
+console.log(TaiDate.leapSeconds.length === 41);
+console.log(TaiDate.leapSeconds[0].taiDate.getTime() === -283996798577);
+console.log(TaiDate.leapSeconds[0].offset === 5682.77);
+console.log(TaiDate.leapSeconds[13].taiDate.getTime() === 63072010000);
+console.log(TaiDate.leapSeconds[14].taiDate.getTime() === 78796811000);
+console.log(TaiDate.leapSeconds[13].offset === 10000);
+console.log(TaiDate.leapSeconds[14].offset === 11000);

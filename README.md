@@ -119,5 +119,3 @@ new TaiDate(2006, 6, 3, 21, 44, 38).toString()
 
 ### TaiDate.leapSeconds
 Returns an array of leap second objects. Each leap second contains the `TaiDate` when the offset between TAI and Unix time changed, and the new offset. E.g. `{taiDate: new TaiDate(78796811000), offset: 11000}` for the inserted leap second of 30 June 1972.
-
-The first entry in the array is the beginning of TAI for our purposes, `{taiDate: new TaiDate(63072010000), offset: 10000}`
