@@ -116,6 +116,3 @@ Return a string representing this instant in TAI.
 new TaiDate(2006, 6, 3, 21, 44, 38).toString()
 // "Mon, 03 Jul 2006 21:44:38 TAI"
 ```
-
-### TaiDate.leapSeconds
-Returns an array of leap second objects. Each leap second contains the `TaiDate` when the offset between TAI and Unix time changed, and the new offset. E.g. `{taiDate: new TaiDate(78796811000), offset: 11000}` for the inserted leap second of 30 June 1972.
