@@ -27,12 +27,6 @@ console.log(OddDate.TAI(1970, 0, 1, 0, 0, 0, 3) === 3);
 console.log(OddDate.TAI(1970, 0, 1, 0, 0, 0, 4) === 4);
 console.log(OddDate.TAI(2007, 5, 3, 13, 14, 15, 999) === 1180876455999);
 
-// .now()
-console.log(OddDate.now() === Date.now() - 4);
-
-// 0-argument constructor
-console.log(new OddDate().getTime() === new Date().getTime() - 4);
-
 // 1-argument constructor
 try {
 	new OddDate("asafdasd");

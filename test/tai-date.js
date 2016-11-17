@@ -4,7 +4,7 @@ var TaiDate = require("./../src/tai-date.js");
 
 // .TAI()
 try {
-	TaiDate.TAI(1961, 0, 1, 0, 0, 1, 422);
+	console.log(TaiDate.TAI(1961, 0, 1, 0, 0, 1, 422));
 	console.log(false);
 } catch(e) {
 	console.log(true);
@@ -61,12 +61,3 @@ console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMilliseconds() === 774)
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMinutes     () === 15);
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getMonth       () === 9);
 console.log(new TaiDate(2016, 9, 27, 21, 15, 16, 774).getSeconds     () === 16);
-
-// leapSeconds
-console.log(TaiDate.leapSeconds.length === 41);
-console.log(TaiDate.leapSeconds[0].taiDate.getTime() === -283996798577);
-console.log(TaiDate.leapSeconds[0].offset === 5682.77);
-console.log(TaiDate.leapSeconds[13].taiDate.getTime() === 63072010000);
-console.log(TaiDate.leapSeconds[14].taiDate.getTime() === 78796811000);
-console.log(TaiDate.leapSeconds[13].offset === 10000);
-console.log(TaiDate.leapSeconds[14].offset === 11000);
