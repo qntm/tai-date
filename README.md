@@ -73,7 +73,7 @@ TaiDate.now()
 ```
 
 ### TaiDate.TAI(year, month[, day[, hours[, minutes[, seconds[, milliseconds]]]]])
-Take the year, month etc. as representing an TAI calendar date and time, and convert it to TAI milliseconds. `day` default to `1` if omitted, everything else defaults to `0`.
+Take the year, month etc. as representing an TAI calendar date and time, and convert it to TAI milliseconds. `day` defaults to `1` if omitted, everything else defaults to `0`.
 ```javascript
 TaiDate.TAI(2012, 11, 12, 23, 59, 59, 999)
 // 1355356799999
