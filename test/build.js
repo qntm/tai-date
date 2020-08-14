@@ -1,6 +1,6 @@
 "use strict";
 
-var tai = require("t-a-i");
+var taiBuild = require("t-a-i/src/build");
 var build = require("./../src/build.js");
 
 //                  inserted       removed
@@ -8,7 +8,7 @@ var build = require("./../src/build.js");
 // TAI:          [3][4][5][6][ 7][ 8][ 9][...]
 // Unix: [...][6][7][8][9][9][10][11]
 //                               [12][13][...]
-var odd = tai.build([
+var odd = taiBuild([
 	{atomic: 3, offset: -4},
 	{atomic: 6, offset: -3}, // inserted leap millisecond
 	{atomic: 9, offset: -4}  // removed leap millisecond
