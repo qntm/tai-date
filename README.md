@@ -79,13 +79,6 @@ TaiDate.TAI(2012, 11, 12, 23, 59, 59, 999)
 // 1355356799999
 ```
 
-### TaiDate.fromDate(date)
-Return a `TaiDate` object representing the same instant in time as `date`, which is a `Date` object.
-```javascript
-TaiDate.fromDate(new Date(2016, 9, 30, 14, 45, 49));
-// Sun Oct 30 2016 14:46:25 TAI
-```
-
 ### TaiDate.prototype.getTime()
 Convert a `TaiDate` object to TAI milliseconds.
 ```javascript
