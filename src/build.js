@@ -41,42 +41,47 @@ module.exports = function (tai) {
       After `Date.prototype.getTime`.
       Converts this instant to TAI milliseconds.
     */
-    getTime = this._date.getTime.bind(this._date)
+    getTime () {
+      return this._date.getTime()
+    }
 
     // Modelled on the `Date.prototype.get[UTC]*` methods.
-    getDate = this._date.getUTCDate.bind(this._date)
-    getDay = this._date.getUTCDay.bind(this._date)
-    getFullYear = this._date.getUTCFullYear.bind(this._date)
-    getHours = this._date.getUTCHours.bind(this._date)
-    getMilliseconds = this._date.getUTCMilliseconds.bind(this._date)
-    getMinutes = this._date.getUTCMinutes.bind(this._date)
-    getMonth = this._date.getUTCMonth.bind(this._date)
-    getSeconds = this._date.getUTCSeconds.bind(this._date)
+    getDate () { return this._date.getUTCDate() }
+    getDay () { return this._date.getUTCDay() }
+    getFullYear () { return this._date.getUTCFullYear() }
+    getHours () { return this._date.getUTCHours() }
+    getMilliseconds () { return this._date.getUTCMilliseconds() }
+    getMinutes () { return this._date.getUTCMinutes() }
+    getMonth () { return this._date.getUTCMonth() }
+    getSeconds () { return this._date.getUTCSeconds() }
 
     /**
       Convert this `TaiDate` to a `Date` representing the same instant
       in time. Go many-to-one here to avoid exceptions during a leap second,
       but round trips will not work
     */
-    toDate = () =>
-      new Date(tai.oneToMany.atomicToUnix(this.getTime()))
+    toDate () {
+      return new Date(tai.oneToMany.atomicToUnix(this.getTime()))
+    }
 
     /**
       Modelled after `Date.prototye.toUTCString`.
       Return e.g. "Mon, 03 Jul 2006 21:44:38 TAI"
     */
-    toString = () => [
-      days[this.getDay()] + ',', // "Mon,"
-      String(this.getDate()).padStart(2, '0'), // "03"
-      months[this.getMonth()], // "Jul"
-      String(this.getFullYear()).padStart(4, '0'), // "2006"
-      [
-        String(this.getHours()).padStart(2, '0'), // "21"
-        String(this.getMinutes()).padStart(2, '0'), // "44"
-        String(this.getSeconds()).padStart(2, '0') // "38"
-      ].join(':'), // "21:44:38"
-      'TAI' // "TAI"
-    ].join(' ')
+    toString () {
+      return [
+        days[this.getDay()] + ',', // "Mon,"
+        String(this.getDate()).padStart(2, '0'), // "03"
+        months[this.getMonth()], // "Jul"
+        String(this.getFullYear()).padStart(4, '0'), // "2006"
+        [
+          String(this.getHours()).padStart(2, '0'), // "21"
+          String(this.getMinutes()).padStart(2, '0'), // "44"
+          String(this.getSeconds()).padStart(2, '0') // "38"
+        ].join(':'), // "21:44:38"
+        'TAI' // "TAI"
+      ].join(' ')
+    }
   }
 
   /**
