@@ -1,6 +1,6 @@
 {
   "name": "tai-date",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A TaiDate stores an instant in TAI (International Atomic Time), the same way that a Date stores an instant in Unix time",
   "homepage": "https://github.com/qntm/tai-date",
   "repository": {
