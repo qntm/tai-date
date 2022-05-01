@@ -20,7 +20,7 @@
     "!src/**/*.spec.js"
   ],
   "devDependencies": {
-    "jest": "^27.0.3",
+    "jest": "^28.0.3",
     "standard": "^17.0.0"
   }
 }
