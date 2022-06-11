@@ -1,7 +1,7 @@
 const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-class TaiDate {
+export class TaiDate {
   // We secretly use an internal UTC `Date` object to do all of
   // this stuff.
 
@@ -74,5 +74,3 @@ class TaiDate {
   and convert it to TAI milliseconds. No bounds checking.
 */
 TaiDate.TAI = Date.UTC.bind(Date)
-
-module.exports.TaiDate = TaiDate
