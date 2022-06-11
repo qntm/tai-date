@@ -1,26 +1,28 @@
 {
   "name": "tai-date",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "A TaiDate stores an instant in TAI (International Atomic Time), the same way that a Date stores an instant in Unix time",
   "homepage": "https://github.com/qntm/tai-date",
   "repository": {
     "type": "git",
     "url": "git://github.com/qntm/tai-date.git"
   },
-  "main": "./src",
+  "type": "module",
+  "main": "./src/index.js",
   "scripts": {
+    "mocha": "c8 --100 mocha",
     "postpublish": "npm version patch && git push",
-    "test": "standard && jest"
+    "standard": "standard",
+    "test": "npm run standard && npm run mocha"
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "files": [
-    "src",
-    "!src/**/*.spec.js"
+    "src"
   ],
   "devDependencies": {
-    "jest": "^28.0.3",
+    "c8": "^7.11.3",
+    "mocha": "^10.0.0",
     "standard": "^17.0.0"
   }
 }

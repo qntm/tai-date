@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.x.x
+
+`tai-date` now exports ES modules, not CommonJS modules.
+
 ## 3.x.x
 
 Removed TAI's dependency on [`t-a-i`](https://github.com/qntm/t-a-i) and all of its methods for converting `TaiDate`s to `Date` and *vice versa*. `TaiDate` can't perform these conversions without knowing precisely what conversion model you want to use, and there's no elegant way to expose that API. Instead, I suggest taking an existing Unix millisecond count and performing the conversions using `t-a-i`.

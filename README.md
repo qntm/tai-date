@@ -13,10 +13,10 @@ npm install tai-date
 ## Usage
 
 ```javascript
-const tai = require('t-a-i')
-const TaiDate = require('tai-date')
+import { TaiConverter } from 't-a-i'
+import { TaiDate } from 'tai-date'
 
-const taiConverter = tai.TaiConverter(tai.MODELS.STALL)
+const taiConverter = TaiConverter(tai.MODELS.STALL)
 
 const date = new Date(2016, 9, 30, 14, 45, 49)
 // Sun Oct 30 2016 14:45:49 GMT+0000 (GMT Standard Time)
