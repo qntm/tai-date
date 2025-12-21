@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.0.0
+
+Support for Node.js 18 and lower is dropped.
+
 ## 4.x.x
 
 `tai-date` now exports ES modules, not CommonJS modules.
